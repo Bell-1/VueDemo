@@ -1,0 +1,161 @@
+//* {
+//  margin: 0;
+//  padding: 0;
+//  list-style: none;
+//}
+//
+//html {
+//  padding: 15px;
+//  display: flex;
+//  align-items: flex-start;
+//  justify-content: center;
+//  color: #333333;
+//  font-size: 14px;
+//  line-height: 20px;
+//  display: flex;
+//  justify-content: center;
+//}
+
+.pointer {
+    cursor: pointer;
+}
+
+.theme-color {
+    color: #6DA64A;
+}
+
+.vitae {
+    width: 100%;
+    /*max-width: 700px;*/
+    padding: 30px;
+    border-radius: 10px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: white;
+    .top {
+        width: 100%;
+        display: flex;
+        flex-flow: column;
+        font-size: 16px;
+        font-weight: bold;
+        .person,
+        .contact {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 50px;
+            &>div {
+                height: 30px;
+            }
+            .name {
+                font-size: 20px;
+            }
+            .job {}
+        }
+        .contact {
+            border-top: 2px solid #333333;
+            font-size: 14px;
+        }
+    }
+    .block {
+        width: 100%;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        .title-row {
+            width: 100%;
+            border-bottom: 1px solid #333333;
+            .title {
+                padding: 4px 10px;
+                width: 150px;
+                background: #333333;
+                color: white;
+                font-size: 18px;
+            }
+        }
+        .content {
+            margin: 15px 0;
+            width: 100%;
+            display: flex;
+            .left {
+                width: 170px;
+                display: flex;
+                justify-content: center;
+                font-size: 14px;
+            }
+            .right {
+                flex: 1;
+                .title {
+                    width: 100%;
+                    display: flex;
+                    font-weight: 900;
+                    margin-bottom: 15px;
+                    font-size: 18px;
+                }
+                .duty {
+                    line-height: 30px;
+                    text-align: left;
+                }
+                .list {
+                    margin-top: 15px;
+                    margin-bottom: 10px;
+                    position: relative;
+                    display: flex;
+                    flex-flow: column;
+                    .list-title {
+                        justify-content: space-between;
+                        font-size: 15px;
+                        font-weight: 700;
+                        color: #2f0f02;
+                    }
+                    .list-item {
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-start;
+                        color: #333;
+                        line-height: 30px;
+                        text-align: left;
+                        .list-item-title {
+                            font-size: 18px;
+                            color: dodgerblue;
+                            margin-right: 10px;
+                            width: 80px;
+                            text-align: right;
+                        }
+                    }
+                }
+            }
+            .sign:before {
+                position: absolute;
+                left: -14px;
+                top: 10px;
+                display: block;
+                width: 6px;
+                height: 6px;
+                background: gray;
+                border-radius: 3px;
+                content: '';
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .vitae {
+        padding: 15px;
+        .top {
+            font-size: 14px;
+            .person,
+            .contact {
+                flex-flow: column;
+                border: none;
+                height: auto;
+                &>div {}
+            }
+        }
+    }
+}
