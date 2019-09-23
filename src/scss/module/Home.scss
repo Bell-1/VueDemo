@@ -1,0 +1,92 @@
+.Home {
+	// padding: 0 20px;
+	.city-and-search {
+		position: sticky;
+		padding: 20px;
+		top: 0;
+		display: flex;
+		flex-flow: row wrap;
+		align-items: center;
+		justify-content: space-between;
+		background: white;
+		z-index: 10;
+
+		.city-box {
+			width: 300px;
+		}
+	}
+	.container {
+		position: relative;
+		display: flex;
+		padding-left: 520px;
+		.room-source {
+			padding: 20px;
+			flex: 1;
+			.block {
+				padding: 20px 0;
+				display: flex;
+				&:not(:last-of-type){
+					margin-bottom: 20px;
+				}
+				.address {
+					width: 150px;
+					display: flex;
+					justify-content: center;
+
+					.el-tag {
+						width: initial;
+					}
+				}
+
+				.rooms {
+					.room {
+						margin-bottom: 15px;
+						display: flex;
+						flex-flow: column;
+						align-items: flex-start;
+
+						.name {
+							margin-bottom: 15px;
+						}
+
+						.doors {
+							display: flex;
+							flex-flow: row wrap;
+							align-items: flex-start;
+							justify-content: flex-start;
+
+							label {
+								margin: 5px 10px 5px 0;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.fix-box {
+		position: fixed;
+		top: 160px;
+		left: 20px;
+		bottom: 20px;
+		width: 500px;
+		z-index: 10;
+		.tabs {
+			height:100%;
+			.el-form-item {
+				display: flex;
+				flex-flow: column;
+				align-items: flex-start;
+				.el-form-item__content {
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+					.el-input ~.el-input {
+						margin-left: 10px; 
+					}
+				}
+			}
+		}
+	}
+}
